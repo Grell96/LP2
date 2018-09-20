@@ -59,6 +59,7 @@ String String::index()
     while(1){
         cin>>a;
         if (a<0 or a>=length)break;
+        aux=aux+data[a];
         }
     return aux;
 }
