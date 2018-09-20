@@ -120,13 +120,13 @@ String operator+ (const char* lhs, const String& rhs)
 }
 String& String::operator+= (const String& s) 
 {
-    unsigned len = length + s.len();
+    int len = length + s.len();
     char*    str = new char[len];
 
-    for (unsigned j=0; j < length; j++)
+    for (int j=0; j < length; j++)
         str[j] = data[j];
 
-    for (unsigned i=0; i < s.len(); i++)
+    for (int i=0; i < s.len(); i++)
         str[length+i] = s[i];
 
     delete data;
