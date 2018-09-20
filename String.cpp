@@ -20,9 +20,14 @@ String::String (const char* c)
         while (c[n] != '\0') n++;
         length = n;
         data   = new char[n];
-        for (int j=0; j < n; j++)
-            data[j] = c[j];
-    } else 
+        for (int j=0; j < n; j++){
+		
+            data[j] = c[j];}
+            data[j+1]='\0':
+            
+    } 
+    
+	else 
     {
         length = 0;
         data   = new char[0];
@@ -51,17 +56,17 @@ int String::len ( ) const
     return length;
 }
 
-String String::index() 
+char* String::index(vector<<int) 
 {
-    String aux;
+    
     int a;
     cout<<endl<<"ingrese indices, y luego -1"<<endl;
     while(1){
         cin>>a;
         if (a<0 or a>=length)break;
-        aux=aux+data[a];
+        x[a]=data[a];
         }
-    return aux;
+    return x;
 }
 ostream& operator<< (ostream& os, const String& s) 
 {
